@@ -48,7 +48,6 @@ public class Group
 
     private void setStudentsList()
     {
-        //this.studentsList = studentsList;
         String selectTableSQL = "SELECT * FROM students WHERE groupnum=" + this.id;
         try
         {
@@ -76,6 +75,7 @@ public class Group
             System.out.println(e.getMessage());
         }
     }
+
     public static void readGroups()
     {
         String selectTableSQL = "SELECT * FROM groups";
@@ -92,6 +92,7 @@ public class Group
                 String groupName = rs.getString("name");
                 groupsMap.put(groupName, groupID);
             }
+
         } catch(SQLException e)
         {
             System.out.println(e.getMessage());
